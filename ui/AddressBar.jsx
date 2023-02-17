@@ -13,7 +13,7 @@ export function AddressBar() {
         <span className="px-2 text-gray-400">trams.tech</span>
         {pathname ? (
           <>
-            <span className="text-gray-600">/</span>
+            <span className="text-gray-600">{pathname}</span>
             {pathname
               .split('/')
               .slice(2)

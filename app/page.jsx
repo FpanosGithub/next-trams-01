@@ -9,11 +9,10 @@ export default function Page() {
       <div className="space-y-10 text-white">
         {menu.map((section) => {
           return (
-            <div key={section.name} className="space-y-5">
+            <div key={section.title} className="space-y-5">
               
               <div className="text-xs font-semibold uppercase tracking-wider text-gray-400">
-                <div>{section.chapter}</div>
-                <div>{section.name}</div>
+                <div>{section.title}</div>
               </div>
 
               <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">

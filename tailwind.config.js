@@ -12,6 +12,11 @@ module.exports = {
   },
   theme: {
     extend: {
+      screens: {
+        'past-sm': '680px',
+        'past-md': '840px',
+        '3xl': '1800px',
+      },
       // https://vercel.com/design/color
       colors: {
         gray: colors.zinc,

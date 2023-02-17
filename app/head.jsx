@@ -4,7 +4,7 @@ export default function Head() {
   return (
     <>
      <DefaultTags />
-      <title>Next Trams</title>
+      <title>Tria Rail Assets Management Sistem</title>
       <meta
         name="description"
         content="."
