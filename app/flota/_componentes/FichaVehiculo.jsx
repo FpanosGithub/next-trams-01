@@ -7,7 +7,7 @@ export default function FichaVehiculo ({vehiculo}){
   return(
     <>
     {/* Div general */}
-    <div className="grid grid-cols-2 gap-1 past-sm:grid-cols-3 past-md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-8">
+    <div className="grid grid-cols-2 gap-1 past-sm:grid-cols-3 past-md:grid-cols-4 2xl:grid-cols-6 3xl:grid-cols-8">
       {/* Div # 1 - Imagen + estado ocupa 2 cols */}
       <div className="flex justify-around align-middle col-span-2 rounded-md py-4 px-2 border border-slate-500 h-[13rem]">
           <Image src = {`/images/vehiculos/${vehiculo.tipo.imagen}`} alt = 'imagen vehículo' height = {200} width = {320} className="rounded-lg"/>
