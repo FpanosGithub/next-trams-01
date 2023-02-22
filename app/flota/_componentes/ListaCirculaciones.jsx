@@ -2,8 +2,14 @@
 import clsx from 'clsx';
 import { XMarkIcon, CheckIcon, BellAlertIcon } from "@heroicons/react/24/solid"
 
-export default function ListaCirculaciones ({circulaciones, select, hover, onSelect}) {
-  
+export default function ListaCirculaciones ({circulaciones, select, hover, onSelect, onHover}) {
+  function handleClick (id_circulacion) {
+    if(select === id_circulacion) {onSelect(-1)}
+    else {onSelect(id_circulacion)}
+  }
+  function handleHover (id_circulacion) {
+    onHover(id_circulacion)
+  }
   return(
     <div className='p-2 overflow-y-scroll border border-slate-500 rounded-lg 2xl:basis-1/3'>
     <div className="table w-full 2xl:h-fit 2xl:max-h-full">
@@ -20,7 +26,9 @@ export default function ListaCirculaciones ({circulaciones, select, hover, onSel
         return (
           <>
           <div key = {circulacion.id} 
-                className={clsx('table-row', {'bg-slate-900 text-slate-400': (select === circulacion.id)})}
+                className={clsx('table-row hover:cursor-pointer hover:bg-slate-900 hover:text-slate-400', {'bg-slate-900 text-slate-400': (select === circulacion.id || hover === circulacion.id)})}
+                onClick={()=>handleClick(circulacion.id)}
+                onMouseOver={()=>handleHover(circulacion.id)}
                 >
             <div className="table-cell pl-4 py-1">{circulacion.dt_inicial.slice(0,10)}</div>
             <div className="table-cell px-1 py-1">{circulacion.dt_inicial.slice(11,19)}</div>
@@ -39,9 +47,6 @@ export default function ListaCirculaciones ({circulaciones, select, hover, onSel
           </div>
           </>
           )})}
-
-
-
       </div>
     </div>            
     </div>
