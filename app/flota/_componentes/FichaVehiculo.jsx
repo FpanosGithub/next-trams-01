@@ -37,13 +37,13 @@ export default function FichaVehiculo ({vehiculo}){
         <div className="text-xs text-slate-300">matricula:</div>
         <div className="rounded-md mt-2 py-1 px-1 h-10  text-lg font-extralight text-center overflow-hidden bg-slate-800 border border-slate-500">{vehiculo.matricula}</div>
         <div className="text-xs text-slate-300 mt-3">Descripción:</div>
-        <div className="rounded-md mt-2 p-1 h-20 text-center text-slate-400 border border-slate-500">{vehiculo.descripcion}</div>
+        <div className="rounded-md mt-2 p-1 h-20 text-center overflow-hidden text-slate-400 border border-slate-500">{vehiculo.descripcion}</div>
       </div>
 
       {/* Div # 3 - Clase y Tipo*/}
       <div className="rounded-md px-4 py-4 border border-slate-500 h-[13rem]">
           <div className="text-xs text-slate-300">Clase:</div>
-          <div className="rounded-md mt-2 p-1 h-10 text-lg font-extralight text-center border border-slate-500">{vehiculo.clase}</div>
+          <div className="rounded-md mt-2 p-1 h-10 text-lg font-extralight text-center overflow-hidden border border-slate-500">{vehiculo.clase}</div>
           <div className="text-xs text-slate-300 mt-3">Tipo:</div>
           <div className="rounded-md mt-2 p-1 h-20 text-center overflow-hidden text-slate-400 border border-slate-500">{vehiculo.tipo.codigo}</div>
       </div>
@@ -58,8 +58,8 @@ export default function FichaVehiculo ({vehiculo}){
 
     {/* Div # 5 - Datos servicio*/}
     <div className="rounded-md px-4 py-4 border border-slate-500 h-[13rem]">
-        <div className="text-xs text-slate-300">km Vehículo:</div>
-        <div className="rounded-md mt-2 py-1 px-2 h-10 text-lg font-extralight text-center border border-slate-500">{Math.round(vehiculo.km_totales).toLocaleString('fr')} km</div>
+        <div className="text-xs text-slate-300">KM realizados</div>
+        <div className="rounded-md mt-2 py-1 px-2 h-10 text-lg font-extralight text-center overflow-hidden border border-slate-500">{Math.round(vehiculo.km_totales).toLocaleString('fr')} km</div>
         <div className="text-s my-3 text-slate-400 flex justify-between">
           Nudo Ferroviario:
           {vehiculo.en_nudo?
@@ -67,7 +67,7 @@ export default function FichaVehiculo ({vehiculo}){
           : (<XMarkIcon className="w-6 h-6 text-gray-400"/>)
           }
         </div>    
-        <div className="rounded-md mt-2 py-1 px-2 h-16 text-center  text-slate-400 border border-slate-500">{vehiculo.observaciones_servicio}</div>   
+        <div className="rounded-md mt-2 py-1 px-2 h-16 text-center overflow-hidden text-slate-400 border border-slate-500">{vehiculo.observaciones_servicio}</div>   
     </div>
 
     {/* Div # 6 - Datos Mantenimiento*/}
@@ -83,11 +83,11 @@ export default function FichaVehiculo ({vehiculo}){
     </div>
     
     {/* Div # 7- */}
-    <div className="rounded-md px-4 py-4  border border-slate-500 h-[13rem] past-sm:col-span-2 past-md:col-span-2">
+    <div className="rounded-md px-4 py-4  border border-slate-500 h-[13rem] past-sm:col-span-2 past-md:col-span-1">
         <div className="text-xs text-slate-300 mb-2">Ejes:</div>
         <div className="rounded-md border border-slate-500 p-4 h-40">
           {vehiculo.ejes.map((eje)=>{return(
-              <Link key={eje.id} className="mt-1 flex justify-between text-lg font-extralight text-slate-400" href = '/flota'> 
+              <Link key={eje.id} className="mt-1 flex justify-between text-lg font-extralight text-slate-400 overflow-hidden" href = '/flota'> 
                 {eje.codigo} 
                 <ArrowTopRightOnSquareIcon className="w-6 h-6 mx-auto"/>
               </Link>
