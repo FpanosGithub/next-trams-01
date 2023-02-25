@@ -11,15 +11,13 @@ export default function RootLayout({children}) {
       <body className="overflow-y-scroll bg-gray-800 bg-[url('/grid.svg')]">
         <GlobalNav />
         <div className="lg:pl-52">
-          <div className="mx-auto max-w-8xl space-y-4 px-2 pt-16 lg:py-8 lg:px-4">
-            
-{/*
+          <div className="mx-auto max-w-8xl space-y-4 px-2 pt-16 lg:py-4 lg:px-4">
             <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
               <div className="rounded-lg bg-black">
                 <AddressBar />
               </div>
             </div>
-*/}
+
             <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
               <div className="rounded-lg bg-black p-3.5 lg:p-6">{children}</div>
             </div>

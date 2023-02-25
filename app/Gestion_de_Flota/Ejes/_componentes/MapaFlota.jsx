@@ -8,7 +8,7 @@ import { WifiIcon, PauseIcon, PlayIcon, WrenchIcon, SignalIcon, XMarkIcon} from 
 export default function MapaFlota ({vehiculos, hover, onHover}) {
   const router = useRouter()
   function handleClick(id) {
-    router.push(`/flota/${id}`)
+    router.push(`/Gestion_de_Flota/Vehiculos/${id}`)
   }
   let punto_purple = [0, 0]
   let codigo = ''

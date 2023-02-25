@@ -5,25 +5,25 @@ export default async function Layout({children}) {
     <div className="space-y-9">
       <div className="flex justify-between">
         <TabGroup
-          path="/flota"
+          path="/Gestion_de_Flota/Ejes"
           items={[
             {
               text: 'Todos',
             },
             {
-              text: 'Locomotoras',
-              slug: 'locomotoras',
-              segment: 'locomotoras',
+              text: 'EAV-Remolcados',
+              slug: 'EAV-R',
+              segment: 'EAV-R',
             },
             {
-              text: 'Vehiculos Auxiliares',
-              slug: 'auxiliares',
-              segment: 'auxiliares',
+              text: 'EAV-Tractores',
+              slug: 'EAV-T',
+              segment: 'EAV-T',
             },
             {
-              text: 'Vagones',
-              slug: 'vagones',
-              segment: 'vagones',
+              text: 'Estandar',
+              slug: 'Estandar',
+              segment: 'Estandar',
             },
           ]}
         />

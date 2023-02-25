@@ -7,7 +7,7 @@ import { PauseIcon, PlayIcon, WifiIcon, WrenchIcon, SignalIcon, XMarkIcon, BellA
 export default function ListaFlota ({vehiculos, hover, onHover}) {
   const router = useRouter()
   function handleClick(id) {
-    router.push(`/flota/${id}`)
+    router.push(`/Gestion_de_Flota/Vehiculos/${id}`)
   }
   const handleHover = (id) => {
     onHover(id)
