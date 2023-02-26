@@ -6,8 +6,11 @@ import Login from './Login';
 
 export async function AddressBar() {
   const session = await getServerSession(authOptions)
+  let user = {name:'', image:''}
+  try {user = session.user}
+  catch {}
   console.log(session)
   return (
-      <Login/>
+      <Login user = {user}/>
   );
 }
