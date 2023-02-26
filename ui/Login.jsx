@@ -2,7 +2,7 @@
 import {signIn} from 'next-auth/react'
 import { usePathname } from 'next/navigation';
 
-export default function Login({session}){
+export default function Login(){
   const pathname = usePathname()
   return(
   <div className="flex items-center justify-between gap-x-2 p-3.5 lg:px-5 lg:py-3">
@@ -29,7 +29,7 @@ export default function Login({session}){
           </>
         ) : null}
       </div>
-    <div>{session.user.name}</div>
+    <div></div>
     <button onClick = {()=> signIn()} className="text-gray-400 ">
         Log in
     </button>

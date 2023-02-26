@@ -8,6 +8,6 @@ export async function AddressBar() {
   const session = await getServerSession(authOptions)
   console.log(session)
   return (
-      <Login session = {session}/>
+      <Login/>
   );
 }
