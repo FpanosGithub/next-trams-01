@@ -1,20 +1,27 @@
 import '@/styles/globals.css';
+import {Roboto} from '@next/font/google'
 import Image from 'next/image';
 import { AddressBar } from '@/ui/AddressBar';
 import { GlobalNav } from '@/ui/GlobalNav';
 import tria from '@/public/favicon/tria-corto.png'
 
-export default function RootLayout({children}) {
+const roboto = Roboto ({ 
+  subsets: ["latin"], 
+  weight: ["400", "700"],
+  variable: "--font-roboto"
+})
+
+export default async function RootLayout({children}) {
   return (
     <html lang="en" className="[color-scheme:dark]">
       <head />
-      <body className="overflow-y-scroll bg-gray-800 bg-[url('/grid.svg')]">
+      <body className={`overflow-y-scroll bg-gray-800 bg-[url('/grid.svg')] ${roboto.variable}`}>
         <GlobalNav />
         <div className="lg:pl-52">
           <div className="mx-auto max-w-8xl space-y-4 px-2 pt-16 lg:py-4 lg:px-4">
             <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
               <div className="rounded-lg bg-black">
-                <AddressBar />
+                <AddressBar/>
               </div>
             </div>
 
